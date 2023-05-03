@@ -1,16 +1,8 @@
 # im_mottu_mobile
 
-A new Flutter project.
+## This project was built using the following versions:
 
-## Getting Started
+Flutter (Channel stable, 3.7.8, locale pt_BR.UTF-8)
 
-This project is a starting point for a Flutter application.
+Dart SDK version: 2.19.5 (stable)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
