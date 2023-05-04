@@ -16,6 +16,12 @@ dependencies:
   #Network-requests
   dio: 5.1.1
 
+  #Cryptographic hashing functions for Dart.
+  crypto: 3.0.3
+
+  #Responsible for the dependency injection system and route management
+  flutter_modular: 5.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
