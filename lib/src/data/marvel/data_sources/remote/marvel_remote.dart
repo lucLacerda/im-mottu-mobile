@@ -35,11 +35,11 @@ class MarvelRemote implements MarvelDataSource {
 
       response = await dio.get(url);
 
-      return ResponseConnectionModel.fromJson(json.decode(response.data))
+      return ResponseConnectionModel.fromJson(response.data)
           .data
           ?.results;
     } catch (e) {
-      throw Exception("Falha ao fazer request: $e");
+      print("Falha ao fazer request: $e");
     }
   }
 }

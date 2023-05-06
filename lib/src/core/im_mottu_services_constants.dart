@@ -6,6 +6,6 @@ class ImMottuServicesConstants {
 
   static String baseUrl = "http://gateway.marvel.com/v1/public/";
 
-  static String pathCharacters = "http://gateway.marvel.com/v1/public/";
+  static String pathCharacters = "characters";
 
 }

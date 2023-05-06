@@ -3,14 +3,14 @@ class MarvelModel {
   String? name;
   String? description;
   String? modified;
-  String? resourceURI;
+  String? imageURI;
 
   MarvelModel({
     this.id,
     this.name,
     this.description,
     this.modified,
-    this.resourceURI,
+    this.imageURI,
   });
 
   factory MarvelModel.fromJson(Map<String, dynamic> json) {
@@ -19,17 +19,8 @@ class MarvelModel {
       name: json['name'],
       description: json['description'],
       modified: json['modified'],
-      resourceURI: json['resourceURI'],
+      imageURI:
+          "${json["thumbnail"]["path"]}.${json["thumbnail"]["extension"]}",
     );
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['name'] = name;
-    data['description'] = description;
-    data['modified'] = modified;
-    data['resourceURI'] = resourceURI;
-    return data;
   }
 }
