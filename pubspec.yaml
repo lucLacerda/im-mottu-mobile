@@ -22,6 +22,18 @@ dependencies:
   #Responsible for the dependency injection system and route management
   flutter_modular: 5.0.3
 
+  #Firebase
+  firebase_core: 2.10.0
+  firebase_crashlytics: 3.1.2
+  firebase_remote_config: 4.0.2
+  firebase_analytics: 10.2.1
+
+  #Store data in key-value format
+  shared_preferences: 2.1.0
+
+  #manager state
+  get: 4.6.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
