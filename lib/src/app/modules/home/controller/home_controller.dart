@@ -58,7 +58,7 @@ class HomeController extends GetxController {
           appendData ? homeStore.listMarvelModel.value + data : data;
       homeStore.listMarvelModel.value = newData;
 
-      await homeStore.sharedPreferences.setString(
+      await homeStore.sharedPreferences?.setString(
           ImMottuServicesConstants.marvelListCharacters, jsonEncode(newData));
     } catch (e) {
       print(e);

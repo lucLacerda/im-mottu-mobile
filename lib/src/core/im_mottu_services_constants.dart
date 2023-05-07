@@ -2,7 +2,7 @@ class ImMottuServicesConstants {
   ImMottuServicesConstants._();
 
   static String apiKeyPublic = "apiKeyPublic";
-  static String apiKeyPrivate = "apikeyPrivate";
+  static String apiKeyPrivate = "apiKeyPrivate";
 
   static String baseUrl = "http://gateway.marvel.com/v1/public/";
 

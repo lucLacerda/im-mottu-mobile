@@ -3,7 +3,7 @@ class RequestGetMarvelCharacter {
   final int? offset;
   late String? hash;
   final DateTime timeStamp;
-  final String? apiKeyPublic;
+  late String? apiKeyPublic;
 
   RequestGetMarvelCharacter({
     this.limit,

@@ -7,7 +7,7 @@ class HomeStore {
   final listMarvelModel = RxList<MarvelModel>();
   final scrollController = ScrollController();
 
-  late SharedPreferences sharedPreferences;
+  SharedPreferences? sharedPreferences;
 
   HomeStore() {
     _init();
