@@ -58,6 +58,7 @@ class _HomePageState extends State<HomePage> {
                           CardCharacterWidget(
                             marvelModel: marvelModel,
                             backgroundColorCard: ImMottuColors.blueColor,
+                            listCharactersRelationed: snapshot.data!,
                           ),
                         ],
                       );

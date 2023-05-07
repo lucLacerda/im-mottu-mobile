@@ -49,6 +49,7 @@ class SearchPage extends StatelessWidget {
               return CardCharacterWidget(
                 marvelModel: marvelModel,
                 backgroundColorCard: ImMottuColors.orangeColor,
+                listCharactersRelationed: filteredList,
               );
             },
           );
