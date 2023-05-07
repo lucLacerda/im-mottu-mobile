@@ -71,7 +71,9 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Modular.to.pushNamed(SearchPage.route);
+        },
         backgroundColor: ImMottuColors.orangeColor,
         child: const Icon(Icons.search),
       ),
