@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart' as dioPackage;
+import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:im_mottu_mobile/src/core/im_mottu_services_constants.dart';
 import 'package:im_mottu_mobile/src/data/marvel/data_sources/marvel_data_source.dart';
 import 'package:im_mottu_mobile/src/data/marvel/models/marvel_model.dart';
@@ -17,11 +18,19 @@ class MarvelRemote implements MarvelDataSource {
   @override
   Future<List<MarvelModel>?>? getListMarvelCharacter(
       RequestGetMarvelCharacter requestGetMarvelCharacter) async {
+
+    final remoteConfig = FirebaseRemoteConfig.instance;
+
+    await remoteConfig.setConfigSettings(RemoteConfigSettings(
+      fetchTimeout: const Duration(minutes: 1),
+      minimumFetchInterval: const Duration(hours: 1),
+    ));
+
     try {
       requestGetMarvelCharacter.hash = generateMd5(
           requestGetMarvelCharacter.timeStamp.toIso8601String() +
-              ImMottuServicesConstants.apiKeyPrivate +
-              requestGetMarvelCharacter.apiKeyPublic);
+              remoteConfig.getString(ImMottuServicesConstants.apiKeyPrivate) +
+              remoteConfig.getString(ImMottuServicesConstants.apiKeyPublic));
 
       requestGetMarvelCharacter.timeStamp.toIso8601String();
 

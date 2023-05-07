@@ -45,7 +45,6 @@ class HomeController extends GetxController {
     bool appendData = false,
   }) async {
     final request = RequestGetMarvelCharacter(
-      apiKeyPublic: ImMottuServicesConstants.apiKeyPublic,
       timeStamp: DateTime.now(),
       limit: limit,
       offset: offset,

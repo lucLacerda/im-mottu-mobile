@@ -3,14 +3,14 @@ class RequestGetMarvelCharacter {
   final int? offset;
   late String? hash;
   final DateTime timeStamp;
-  final String apiKeyPublic;
+  final String? apiKeyPublic;
 
   RequestGetMarvelCharacter({
     this.limit,
     this.offset,
     this.hash,
+    this.apiKeyPublic,
     required this.timeStamp,
-    required this.apiKeyPublic,
   });
 
   Map<String, dynamic> toJson() {
