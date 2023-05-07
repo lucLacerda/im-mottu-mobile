@@ -8,4 +8,7 @@ class ImMottuServicesConstants {
 
   static String pathCharacters = "characters";
 
+  static int limitOffset = 20;
+
+  static String marvelListCharacters = "MARVEL_LIST_CHARACTER";
 }

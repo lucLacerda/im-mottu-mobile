@@ -10,12 +10,11 @@ class ImMottuApp extends StatefulWidget {
 
 class _ImMottuAppState extends State<ImMottuApp> {
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'ImMottu',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(),
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
     );
