@@ -3,12 +3,12 @@ import 'package:im_mottu_mobile/src/app/modules/home/widgets/modal_content_widge
 import 'package:im_mottu_mobile/src/core/im_mottu_colors.dart';
 import 'package:im_mottu_mobile/src/data/marvel/models/marvel_model.dart';
 
-class CardCharacterWidget extends StatelessWidget {
+class MiniCardCharacterRelationedWidget extends StatelessWidget {
   final MarvelModel marvelModel;
   final List<MarvelModel> listCharactersRelationed;
   final Color backgroundColorCard;
 
-  const CardCharacterWidget({
+  const MiniCardCharacterRelationedWidget({
     super.key,
     required this.marvelModel,
     required this.backgroundColorCard,
@@ -19,8 +19,8 @@ class CardCharacterWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        width: double.infinity,
-        height: 80,
+        width: 180,
+        height: 10,
         decoration: BoxDecoration(
           color: backgroundColorCard,
           borderRadius: const BorderRadius.all(
@@ -28,7 +28,7 @@ class CardCharacterWidget extends StatelessWidget {
           ),
         ),
         margin: const EdgeInsetsDirectional.symmetric(
-          horizontal: 32,
+          horizontal: 8,
           vertical: 16,
         ),
         child: Row(

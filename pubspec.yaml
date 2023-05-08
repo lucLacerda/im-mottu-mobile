@@ -23,16 +23,16 @@ dependencies:
   flutter_modular: 5.0.3
 
   #Firebase
-  firebase_core: 2.10.0
-  firebase_crashlytics: 3.1.2
-  firebase_remote_config: 4.0.2
-  firebase_analytics: 10.2.1
+  firebase_core: 2.11.0
+  firebase_crashlytics: 3.2.0
+  firebase_remote_config: 4.1.0
+  firebase_analytics: 10.3.0
 
   #Store data in key-value format
   shared_preferences: 2.1.0
 
   #manager state
-  get: 4.6.1
+  get: 4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -42,3 +42,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - lib/assets/
+
