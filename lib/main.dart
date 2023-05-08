@@ -6,6 +6,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:im_mottu_mobile/firebase_options.dart';
 import 'package:im_mottu_mobile/src/app/config/im_mottu_app.dart';
 import 'package:im_mottu_mobile/src/app/config/im_mottu_injector.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,8 +17,12 @@ void main() async {
   final remoteConfig = FirebaseRemoteConfig.instance;
   remoteConfig.fetchAndActivate();
 
-  await FirebaseCrashlytics.instance
-      .setCrashlyticsCollectionEnabled(true);
+  await FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
+
+  FirebaseAnalytics.instance;
+
+  //Teste de crash
+  // FirebaseCrashlytics.instance.crash();
 
   runApp(
     ModularApp(
