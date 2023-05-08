@@ -96,16 +96,22 @@ class ModalContentWidget extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: listCharactersRelationed.length,
               itemBuilder: (BuildContext context, int index) {
-                final List<MarvelModel> filteredMarvels = [];
+                final Set<MarvelModel> filteredCharacters = {};
+
                 marvelModel.comics?.items?.forEach((element) {
-                  filteredMarvels.addAll(filterByComics(
-                      listCharactersRelationed, element?.name ?? ''));
+                  final marvels = filterByComics(
+                    marvels: listCharactersRelationed,
+                    comicsName: element?.name ?? '',
+                  );
+                  filteredCharacters.addAll(marvels);
                 });
-                if (index >= filteredMarvels.length || index >= 5) {
+
+                final uniqueCharacter = filteredCharacters.toList();
+                if (index >= uniqueCharacter.length || index >= 5) {
                   return null;
                 }
-                final MarvelModel marvelModelRelationed =
-                    filteredMarvels[index];
+
+                final marvelModelRelationed = uniqueCharacter[index];
                 return MiniCardCharacterRelationedWidget(
                   backgroundColorCard: ImMottuColors.redColor,
                   listCharactersRelationed: listCharactersRelationed,
@@ -119,12 +125,15 @@ class ModalContentWidget extends StatelessWidget {
     );
   }
 
-  List<MarvelModel> filterByComics(
-      List<MarvelModel> marvels, String comicsName) {
+  List<MarvelModel> filterByComics({
+    required List<MarvelModel> marvels,
+    required String comicsName,
+  }) {
     return marvels
         .where((marvel) =>
             marvel.comics?.items?.any((item) => item?.name == comicsName) ??
             false)
+        .toSet()
         .toList();
   }
 }
