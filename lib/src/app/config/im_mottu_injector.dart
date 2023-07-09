@@ -2,7 +2,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:im_mottu_mobile/src/app/modules/home/controller/home_controller.dart';
 import 'package:im_mottu_mobile/src/app/modules/home/page/home_page.dart';
 import 'package:im_mottu_mobile/src/app/modules/home/store/home_store.dart';
-import 'package:im_mottu_mobile/src/app/modules/search/controller/search_controller.dart';
+import 'package:im_mottu_mobile/src/app/modules/search/controller/search_marvel_controller.dart';
 import 'package:im_mottu_mobile/src/app/modules/search/page/search_page.dart';
 import 'package:im_mottu_mobile/src/app/modules/splash/page/splash_page.dart';
 import 'package:im_mottu_mobile/src/data/marvel/data_sources/marvel_data_source.dart';
@@ -33,7 +33,7 @@ class ImMottuInjector extends Module {
               getListMarvelCharacterUseCase: i(),
               homeStore: i(),
             )),
-        Bind.lazySingleton<SearchController>((i) => SearchController(
+        Bind.lazySingleton<SearchMarvelController>((i) => SearchMarvelController(
               homeStore: i(),
             )),
       ];
@@ -52,7 +52,7 @@ class ImMottuInjector extends Module {
         ChildRoute(
           SearchPage.route,
           child: (context, args) =>
-              SearchPage(searchController: Modular.get<SearchController>()),
+              SearchPage(searchController: Modular.get<SearchMarvelController>()),
         ),
       ];
 }
