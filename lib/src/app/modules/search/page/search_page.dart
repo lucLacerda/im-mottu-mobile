@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:im_mottu_mobile/src/app/modules/home/widgets/card_character_widget.dart';
-import 'package:im_mottu_mobile/src/app/modules/search/controller/search_controller.dart';
+import 'package:im_mottu_mobile/src/app/modules/search/controller/search_marvel_controller.dart';
 import 'package:im_mottu_mobile/src/core/im_mottu_colors.dart';
 import 'package:im_mottu_mobile/src/data/marvel/models/marvel_model.dart';
 
 class SearchPage extends StatelessWidget {
   static const String route = "/searchPage";
-  final SearchController searchController;
+  final SearchMarvelController searchController;
 
   const SearchPage({
     super.key,

@@ -1,12 +1,12 @@
 import 'package:get/get.dart';
 import 'package:im_mottu_mobile/src/app/modules/home/store/home_store.dart';
 
-class SearchController extends GetxController {
+class SearchMarvelController extends GetxController {
   RxString searchQuery = ''.obs;
 
   final HomeStore homeStore;
 
-  SearchController({
+  SearchMarvelController({
     required this.homeStore,
   });
 
